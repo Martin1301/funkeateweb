@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+.wrapper .punteros {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper .punteros:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper #left {
+  left: 28px;
+  z-index: 26;
+  width: 60px;
+}
+.wrapper #right {
+  right: 28px;
+  z-index: 18;
+  width: 60px;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100%));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  backdrop-filter: blur(20px);
+  scroll-snap-align: start;
+  height: 500px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+}
+.card img {
+  height: 460px;
+  width: 1150px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+.slide1 {
+  background-image: url("/img/bg.png");
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+}
+.slide2 {
+  background-image: url("/img/bg2.png");
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+}
+
+.slide3 {
+  background-image: url("/img/bg3.png");
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+}
+
+.slide4 {
+  background-image: url("/img/bg4.png");
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+}

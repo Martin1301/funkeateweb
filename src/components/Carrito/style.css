@@ -1,0 +1,21 @@
+.carrito-compras {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+}
+.car {
+  color: black;
+  background: rgb(255, 191, 88);
+  right: 0;
+}
+.cerrar {
+  height: 25px;
+  width: 25px;
+}
+.carrito-buy {
+  height: 28px;
+  width: 28px;
+}
+.contenedor-compras {
+  overflow-y: auto;
+}

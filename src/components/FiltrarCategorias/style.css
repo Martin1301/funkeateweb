@@ -1,0 +1,13 @@
+.filtrar-categoria {
+  background-image: linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
+}
+.grid {
+  display: grid;
+  grid-template-columns: 30% 70%; /* Porcentaje de ancho para la columna 1 y 2 respectivamente */
+}
